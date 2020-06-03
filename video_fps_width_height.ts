@@ -17,7 +17,8 @@ let remoteVideo = () =>
         .find(s => s.type === 'track'));
 
 let f = setInterval(async () => {
-    console.log(localVideo().width, localVideo().height, localVideo().framesPerSecond);
+    let localVideo = await localVideo();
+    console.log(localVideo.width, localVideo.height, localVideo.framesPerSecond);
 }, 1000);
 
 // И остановить
